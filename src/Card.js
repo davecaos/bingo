@@ -10,12 +10,13 @@ const Card = ({ text, onChange, index, isCenter }) => {
       w="160px"
       h="160px"
       border="2px"
-      fontSize={16}
+      fontSize={15}
       borderColor="black.200"
       borderRadius="0"
-      textAlign={[ 'left', 'center' ]}
+      textAlign={[ 'center' ]}
       style={{
         whiteSpace: "normal",
+        fontWeight: "bold",
         wordWrap: "break-all",
         textJustify: "inter-word"
       }}

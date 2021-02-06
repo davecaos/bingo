@@ -8,12 +8,12 @@ export default function URLCopier({ cards }) {
   let currentURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname  // returns the absolute URL of a page
   const url = currentURL
   const pathname = url + "?" + queryParams;
-  const { hasCopied, onCopy } = useClipboard(pathname);
+  const { _hasCopied, onCopy } = useClipboard(pathname);
   const toast = useToast();
 
   const handleCopy = () => {
     toast({
-      title: "Copied!",
+      title: "Copied to clipboard!",
       position: "bottom-right",
       description: pathname,
       duration: 2000,
@@ -24,7 +24,7 @@ export default function URLCopier({ cards }) {
   };
 
   return (
-    <Button colorScheme="red" onClick={handleCopy}>
+    <Button  bg="#00917a" onClick={handleCopy}>
       Share editable link
     </Button>
   );
