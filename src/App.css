@@ -3,6 +3,10 @@
   background-color: #f7eada;
 }
 
+.bingo {
+  text-align: center;
+  background-color: #f7eada;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

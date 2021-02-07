@@ -1,16 +1,16 @@
 import { Textarea } from "@chakra-ui/react";
-import React, { useState } from "react";
-import "./App.css";
+import React from "react";
+import { bgBingo, greenBingo } from "../colors";
 
 const Card = ({ text, onChange, index, isCenter }) => {
-  const backgroundColor = isCenter ? "#00917a" : "#f7eada";
+  const backgroundColor = isCenter ? greenBingo : bgBingo;
   const color = isCenter ? "#f3e9de" : "black.200";
   return (
     <Textarea
-      w="160px"
-      h="160px"
+      w="150px"
+      h="150px"
       border="2px"
-      fontSize={15}
+      fontSize={14}
       borderColor="black.200"
       borderRadius="0"
       textAlign={[ 'center' ]}
