@@ -25,7 +25,7 @@ export default function URLCopierButton({ cards }) {
   };
 
   return (
-    <Button  bg={greenBingo} onClick={handleCopy}>
+    <Button  bg={greenBingo} onClick={handleCopy}ml={3}>
       Share editable link
     </Button>
   );

@@ -51,7 +51,7 @@ function App() {
             </Center>
           </Box>
         </div>
-        <Buttons cards={cards}/>
+        <Buttons cards={cards} setCards={setCards}/>
       </div>
     </ChakraProvider>
   );
