@@ -4,7 +4,7 @@ import URLCopierButton from "./URLCopierButton";
 import ImageSaveButton from "./ImageSaveButton";
 import BlankTemplateButton from "./BlankTemplateButton";
 
-export default function Buttons({ cards , setCards}){
+const Buttons = ({ cards, setCards}) => {
     return (
       <Box p={2}>
         <URLCopierButton cards={cards} />
@@ -14,4 +14,4 @@ export default function Buttons({ cards , setCards}){
     );
   };
 
-
+export default Buttons;

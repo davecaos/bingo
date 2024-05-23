@@ -1,8 +1,8 @@
 import { Textarea } from "@chakra-ui/react";
 import React from "react";
-import { bgBingo, greenBingo } from "../colors";
+import { bgBingo, greenBingo } from "../constants/colors";
 
-const Card = ({ text, onChange, index, isCenter }) => {
+const Tile = ({ text, onChange, index, isCenter }) => {
   const backgroundColor = isCenter ? greenBingo : bgBingo;
   const color = isCenter ? "#f3e9de" : "black.200";
   return (
@@ -29,4 +29,4 @@ const Card = ({ text, onChange, index, isCenter }) => {
   );
 }
 
-export default Card;
+export default Tile;

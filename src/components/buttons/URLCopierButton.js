@@ -1,12 +1,12 @@
 import React from "react";
-import { greenBingo } from "../colors";
+import { greenBingo } from "../../constants/colors";
 import { useClipboard, useToast, Button } from "@chakra-ui/react";
 
-export default function URLCopierButton({ cards }) {
+const URLCopierButton = ({ cards }) => {
   const queryParams = cards
     .map((text, index) => (text ? `${index}=${text}&` : ""))
     .join("");
-  let currentURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname  // returns the absolute URL of a page
+  let currentURL = window.location.protocol + "//" + window.location.host + window.location.pathname  // returns the absolute URL of a page
   const url = currentURL
   const pathname = url + "?" + queryParams;
   const { _hasCopied, onCopy } = useClipboard(pathname);
@@ -25,8 +25,10 @@ export default function URLCopierButton({ cards }) {
   };
 
   return (
-    <Button  bg={greenBingo} onClick={handleCopy}ml={3}>
+    <Button bg={greenBingo} onClick={handleCopy}ml={3}>
       Share editable link
     </Button>
   );
 }
+
+export default URLCopierButton;

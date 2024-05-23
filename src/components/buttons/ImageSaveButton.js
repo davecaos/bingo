@@ -1,9 +1,9 @@
 import { Button } from "@chakra-ui/react";
 import React from "react";
 import domtoimage from "dom-to-image";
-import { greenBingo } from "../colors";
+import { greenBingo } from "../../constants/colors";
 
-export default function ImageSaveButton() {
+const ImageSaveButton = () => {
   const image = () => {
     domtoimage
       .toJpeg(document.getElementById("bingo"), { quality: 0.95 })
@@ -21,3 +21,5 @@ export default function ImageSaveButton() {
     </Button>
   );
 }
+
+export default ImageSaveButton;

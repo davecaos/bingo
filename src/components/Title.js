@@ -1,9 +1,9 @@
 import { Center, Text, Box } from "@chakra-ui/react";
 import React from "react";
 
-import { greenBingo } from "../colors";
+import { greenBingo } from "../constants/colors";
 
-export default function Title() {
+const Title = () => {
   return (
     <Center>
       <Box p={2}>
@@ -14,4 +14,5 @@ export default function Title() {
   );
 };
  
+export default Title;
 
